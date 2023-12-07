@@ -5,10 +5,11 @@ metadata:
   name: nodeapp-service
 spec:
   selector:
-    app: nodeapp 
+    app: nodeapp
   type: NodePort
   ports:
-  - nodePort: 31110
-    protocol: TCP
+  - name: http
+    nodePort: 31110
     port: 80
     targetPort: 3000
+    protocol: TCP
