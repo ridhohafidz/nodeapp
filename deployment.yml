@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: nodeserver
-        image: registry.tukanginfra.my.id/staging/nodeapp:latest
+        image: registry.tukanginfra.my.id/development/nodeapp:latest
         ports:
         - containerPort: 80
