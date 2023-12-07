@@ -1,5 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
+namespace: nodeapp
 metadata:
   name: nodeapp-deployment
   labels:
@@ -25,14 +26,15 @@ spec:
 
 apiVersion: v1
 kind: Service
+namespace: nodeapp
 metadata:
   name: nodeapp-service
 spec:
   selector:
     app: nodeapp 
-  type: LoadBalancer
+  type: NodePort
   ports:
-  - protocol: TCP
-    port: 5000
+  - nodePort: 31110
+    protocol: TCP
+    port: 80
     targetPort: 3000
-    nodePort: 31110
