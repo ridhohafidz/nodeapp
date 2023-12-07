@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
-namespace: nodeapp
 metadata:
   name: nodeapp-development2
+  namespace: nodeapp
   labels:
     app: nodeapp
 spec:
@@ -25,9 +25,9 @@ spec:
 
 apiVersion: v1
 kind: Service
-namespace: nodeapp
 metadata:
   name: nodeapp-development-service
+  namespace: nodeapp
 spec:
   selector:
     app: nodeapp
