@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 namespace: nodeapp
 metadata:
-  name: nodeapp-service
+  name: nodeapp-development-service
 spec:
   selector:
     app: nodeapp
