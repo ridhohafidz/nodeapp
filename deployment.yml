@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
-namespace: nodeapp
 metadata:
   name: nodeapp-development2
+  namespace: nodeapp
   labels:
     app: nodeapp
 spec:
@@ -13,10 +13,10 @@ spec:
   template:
     metadata:
       labels:
-        app: nodeapp 
+        app: nodeapp
     spec:
       containers:
       - name: nodeserver
-        image: registry.tukanginfra.my.id/development/nodeapp
+        image: registry.tukanginfra.my.id/development/nodeapp:latest
         ports:
-        - containerPort: 80
+        - containerPort: 3000
